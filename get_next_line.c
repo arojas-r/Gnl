@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
-
+/*Retorna una cadena de texto, pide como argumentos el buffer que es todo el texto leido y el eol_loc que es el tamaño de la linea leida*/
 char	*init_line(char *buffer, int *eol_loc)
 {
 	size_t	len;
@@ -29,7 +29,8 @@ char	*init_line(char *buffer, int *eol_loc)
 		*eol_loc = len - 1;
 	return (line);
 }
-
+/*Es el que consigue el tamaño de la linea al igual que el eol_loc*/
+/*la diferencia esta funcion la utilizaremos en extract_line*/
 size_t	locate_eol(char *line)
 {
 	size_t	i;
@@ -45,7 +46,8 @@ size_t	locate_eol(char *line)
 	}
 	return (i);
 }
-
+/*Es para leer mas allá del nulo */
+/*en caso de que hayan texto despues del este*/
 char	*extract_line(char *line, char *buffer, int *eol_loc, int fd)
 {
 	char	temp_buffer[BUFFER_SIZE + 1];
