@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
-/*Retorna una cadena de texto, pide como argumentos el buffer que es todo el texto leido y el eol_loc que es el tamaño de la linea leida*/
+/*Retorna una cadena de texto, pide como parametros el buffer que es todo*/
+/*el texto leido y el eol_loc que es el tamaño de la linea leida*/
 char	*init_line(char *buffer, int *eol_loc)
 {
 	size_t	len;
